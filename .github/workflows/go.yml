@@ -28,10 +28,11 @@ jobs:
         pwd
         git clone https://github.com/gin-gonic/examples.git
         cd examples
-        go build -o goexample basic/main.go
+        CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o goexample basic/main.go
         cd ..
         mv examples/goexample .
         pwd
+        ls
         
     - name: Docker meta
       id: meta
