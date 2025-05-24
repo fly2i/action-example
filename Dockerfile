@@ -1,4 +1,4 @@
 FROM scratch
-COPY ./goexample .
+COPY ./goexample /goexample
 ENV PORT=8080
-ENTRYPOINT [ "goexample" ]
+ENTRYPOINT [ "/goexample" ]
